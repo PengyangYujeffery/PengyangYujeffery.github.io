@@ -2,27 +2,39 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+title: Pengyang Yu # 建议直接写上全名，或者保持 blank 也可以
+first_name: Pengyang
+middle_name:
+last_name: Yu
+
+# 联系方式下的小字提示，不需要的话可以留空
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Email is the best way to reach me.
+
+# 网站描述（SEO关键）：这行字会出现在 Google 搜索结果里
+# 建议写上你的身份和学校
+description: >
+  PhD Student in Computer Vision at [Your University Name]. Research interests include 3D Reconstruction, GANs, and NeRF.
+
+# 页脚版权信息
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+# 关键词（SEO关键）：方便别人搜到你
+keywords: computer vision, deep learning, machine learning, pengyang yu, phd, [Your University]
+
+lang: en # 网站语言，保持英文即可
+icon: 💻 # 网站浏览器标签页的小图标。推荐：🎓 (博士帽), 🤖 (机器人), 👁️ (视觉), 💻 (电脑)
+
+# -----------------------------------------------------------
+# !!! 下面这两行是最重要的，改错会导致网站样式崩坏 !!!
+# -----------------------------------------------------------
+
+url: https://pengyangyu.com  # 必须改成你的新域名
+baseurl: ""  # 必须改为空字符串！因为你是主域名，不是子目录
+last_updated: false # 是否在页脚显示最后更新时间，看个人喜好
+impressum_path: # 欧洲隐私合规相关，通常留空即可
+back_to_top: true # 返回顶部按钮
 
 # -----------------------------------------------------------------------------
 # Theme

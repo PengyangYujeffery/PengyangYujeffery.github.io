@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "medical-ai",
+      "group": "core",
+      "label": { "en": "Medical AI", "zh": "医学 AI" },
+      "description": { "en": "A research programme for understanding when medical AI can be trusted across clinical settings.", "zh": "围绕医学人工智能在不同临床场景下何时值得信任展开的研究计划。" },
+      "links": []
+    },
+    {
+      "id": "reliability",
+      "group": "topic",
+      "label": { "en": "Reliability", "zh": "可靠性" },
+      "description": { "en": "Auditing localized reliability, calibration, and high-confidence errors under clinical distribution shift.", "zh": "研究临床分布偏移下的局部可靠性、校准和高置信度错误。" },
+      "links": []
+    },
+    {
+      "id": "fairness",
+      "group": "topic",
+      "label": { "en": "Fairness", "zh": "公平性" },
+      "description": { "en": "Studying how fairness should be evaluated across institutions and patient groups in medical AI.", "zh": "研究医学人工智能中如何同时评估机构之间和患者群体之间的公平性。" },
+      "links": []
+    },
+    {
+      "id": "deployment",
+      "group": "topic",
+      "label": { "en": "Clinical deployment", "zh": "临床部署" },
+      "description": { "en": "Turning reliability evidence into monitoring, calibration, and deferral decisions after deployment.", "zh": "将可靠性证据转化为部署后的监测、校准和拒答决策。" },
+      "links": []
+    },
+    {
+      "id": "federated-imaging",
+      "group": "method",
+      "label": { "en": "Federated imaging", "zh": "联邦医学影像" },
+      "description": { "en": "A setting where institutional collaboration and patient-group fairness need to be considered together.", "zh": "需要同时考虑机构协作和患者群体公平性的研究场景。" },
+      "links": []
+    },
+    {
+      "id": "vision-language",
+      "group": "method",
+      "label": { "en": "Vision-language models", "zh": "视觉语言模型" },
+      "description": { "en": "Medical vision-language models whose reliability and hallucination behaviour can vary across domains.", "zh": "其可靠性与幻觉行为可能随数据域变化的医学视觉语言模型。" },
+      "links": []
+    },
+    {
+      "id": "chest-xray",
+      "group": "method",
+      "label": { "en": "Chest X-ray", "zh": "胸部 X 光" },
+      "description": { "en": "A public-data setting for studying cross-domain reliability and hallucination heterogeneity.", "zh": "用于研究跨域可靠性和幻觉异质性的公开数据场景。" },
+      "links": []
+    },
+    {
+      "id": "hd-cal",
+      "group": "work",
+      "label": { "en": "HD-Cal", "zh": "HD-Cal" },
+      "description": { "en": "Few-shot reliability estimation for cross-domain hallucination heterogeneity in chest X-ray vision-language models.", "zh": "面向胸部 X 光视觉语言模型跨域幻觉异质性的少样本可靠性估计。" },
+      "links": [
+        { "label": { "en": "View current work", "zh": "查看当前研究" }, "href": "publications.html#current-work" }
+      ]
+    },
+    {
+      "id": "dual-fairness",
+      "group": "work",
+      "label": { "en": "Dual-fairness review", "zh": "双重公平综述" },
+      "description": { "en": "A systematic review connecting collaboration fairness across institutions with group fairness across patient populations.", "zh": "连接机构协作公平与患者群体公平的系统综述。" },
+      "links": [
+        { "label": { "en": "DOI: 10.1007/s10462-026-11632-4", "zh": "DOI：10.1007/s10462-026-11632-4" }, "href": "https://doi.org/10.1007/s10462-026-11632-4", "external": true }
+      ]
+    },
+    {
+      "id": "medlitenet",
+      "group": "work",
+      "label": { "en": "MedLiteNet", "zh": "MedLiteNet" },
+      "description": { "en": "Earlier work on a lightweight hybrid medical image segmentation model for efficient and deployable medical AI.", "zh": "关于轻量化混合医学图像分割模型的早期研究，面向高效和可部署的医学人工智能。" },
+      "links": [
+        { "label": { "en": "DOI: 10.1109/JSAS.2025.3648685", "zh": "DOI：10.1109/JSAS.2025.3648685" }, "href": "https://doi.org/10.1109/JSAS.2025.3648685", "external": true }
+      ]
+    }
+  ],
+  "links": [
+    { "source": "medical-ai", "target": "reliability" },
+    { "source": "medical-ai", "target": "fairness" },
+    { "source": "medical-ai", "target": "deployment" },
+    { "source": "medical-ai", "target": "medlitenet" },
+    { "source": "reliability", "target": "vision-language" },
+    { "source": "reliability", "target": "chest-xray" },
+    { "source": "reliability", "target": "hd-cal" },
+    { "source": "fairness", "target": "federated-imaging" },
+    { "source": "fairness", "target": "dual-fairness" },
+    { "source": "deployment", "target": "reliability" },
+    { "source": "deployment", "target": "fairness" },
+    { "source": "vision-language", "target": "chest-xray" },
+    { "source": "vision-language", "target": "hd-cal" },
+    { "source": "chest-xray", "target": "hd-cal" },
+    { "source": "federated-imaging", "target": "dual-fairness" }
+  ]
+}

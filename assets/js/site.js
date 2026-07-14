@@ -7,6 +7,8 @@
   const searchToggle = document.getElementById('searchToggle');
   const searchForm = document.getElementById('siteSearchForm');
   const searchInput = document.getElementById('siteSearchInput');
+  const navToggle = document.getElementById('navToggle');
+  const primaryNav = document.getElementById('primaryNav');
 
   function setTheme(isDark) {
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
@@ -77,6 +79,28 @@
     });
   }
 
+  function setNavOpen(isOpen) {
+    if (!navToggle || !primaryNav) return;
+    primaryNav.classList.toggle('is-open', isOpen);
+    navToggle.classList.toggle('is-open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener('click', function() {
+      setNavOpen(!primaryNav.classList.contains('is-open'));
+    });
+  }
+
+  if (primaryNav) {
+    primaryNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        setNavOpen(false);
+      });
+    });
+  }
+
   function setSearchOpen(isOpen) {
     if (!searchShell || !searchToggle) return;
     searchShell.classList.toggle('is-open', isOpen);
@@ -116,7 +140,17 @@
   }
 
   document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') setSearchOpen(false);
+    if (event.key === 'Escape') {
+      setSearchOpen(false);
+      setNavOpen(false);
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!primaryNav || !navToggle || !primaryNav.classList.contains('is-open')) return;
+    if (!primaryNav.contains(event.target) && !navToggle.contains(event.target)) {
+      setNavOpen(false);
+    }
   });
 
   if ('IntersectionObserver' in window) {

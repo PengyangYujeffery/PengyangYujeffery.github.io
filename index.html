@@ -20,13 +20,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/font_sans_serif.css">
-  <link rel="stylesheet" href="assets/css/theme-luka.css?v=10">
+  <link rel="stylesheet" href="assets/css/theme-luka.css?v=11">
 </head>
 <body class="theme-luka">
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-left">
-        <div class="nav-links">
+        <button id="navToggle" class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav" title="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="primaryNav">
           <a class="nav-link active" href="./" data-i18n data-en="Home" data-zh="首页">Home</a>
           <a class="nav-link" href="research.html" data-i18n data-en="Research" data-zh="研究">Research</a>
           <a class="nav-link" href="publications.html" data-i18n data-en="Publications" data-zh="论文">Publications</a>
@@ -156,6 +159,6 @@
   </div>
 
   <script src="assets/js/scale.fix.js"></script>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

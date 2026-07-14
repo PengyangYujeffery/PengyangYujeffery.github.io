@@ -95,7 +95,11 @@
   });
 
   const savedLanguage = localStorage.getItem('language');
-  setLanguage(savedLanguage === 'zh' ? 'zh' : 'en');
+  const browserLanguage = /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+  const initialLanguage = savedLanguage === 'zh' || savedLanguage === 'en'
+    ? savedLanguage
+    : browserLanguage;
+  setLanguage(initialLanguage);
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function() {

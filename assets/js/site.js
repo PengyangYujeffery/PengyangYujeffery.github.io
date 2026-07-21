@@ -10,6 +10,19 @@
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.getElementById('primaryNav');
 
+  function getRouteLanguage() {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (path === '/en') return 'en';
+    if (path === '/zh') return 'zh';
+    return null;
+  }
+
+  function updateLanguageRoute(language) {
+    const routeLanguage = getRouteLanguage();
+    if (!routeLanguage || routeLanguage === language) return;
+    window.history.replaceState({}, '', language === 'zh' ? '/zh' : '/en');
+  }
+
   function setTheme(isDark) {
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
     if (themeIcon) {
@@ -96,9 +109,10 @@
 
   const savedLanguage = localStorage.getItem('language');
   const browserLanguage = /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
-  const initialLanguage = savedLanguage === 'zh' || savedLanguage === 'en'
+  const routeLanguage = getRouteLanguage();
+  const initialLanguage = routeLanguage || (savedLanguage === 'zh' || savedLanguage === 'en'
     ? savedLanguage
-    : browserLanguage;
+    : browserLanguage);
   setLanguage(initialLanguage);
 
   if (themeToggle) {
@@ -111,7 +125,9 @@
   if (languageToggle) {
     languageToggle.addEventListener('click', function() {
       const currentLanguage = document.documentElement.lang === 'zh-CN' ? 'zh' : 'en';
-      setLanguage(currentLanguage === 'en' ? 'zh' : 'en');
+      const nextLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+      updateLanguageRoute(nextLanguage);
+      setLanguage(nextLanguage);
     });
   }
 

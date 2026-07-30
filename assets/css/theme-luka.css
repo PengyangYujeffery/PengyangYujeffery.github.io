@@ -220,6 +220,13 @@ body.theme-luka .social-icons a:hover {
   transform: translateY(-2px);
 }
 
+body.theme-luka .social-icons .social-svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 auto;
+}
+
 body.theme-luka .visitor-card {
   margin: 40px auto 0;
   width: 240px;

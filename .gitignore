@@ -7,3 +7,10 @@ Thumbs.db
 
 # macOS metadata
 ._*
+
+# Windows "downloaded from the internet" markers
+*Zone.Identifier
+
+# Local tooling
+.wrangler/
+__pycache__/

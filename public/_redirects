@@ -1,0 +1,35 @@
+/ /index.html 200
+/en/ /en 301
+/zh/ /zh 301
+/en /index.html 200
+/zh /index.html 200
+/research /research.html 200
+/publications /publications.html 200
+/teaching /teaching.html 200
+/news /news.html 200
+/search /search.html 200
+/baidu_verify_codeva-mu9gPUY2jP.html /baidu_verify_codeva-mu9gPUY2jP 200
+
+# Trailing slashes, and URLs of the previous al-folio site (before July 2026)
+/research/ /research 301
+/research/* /research 301
+/publications/ /publications 301
+/publications/* /publications 301
+/teaching/ /teaching 301
+/teaching/* /teaching 301
+/teachings/ /teaching 301
+/teachings/* /teaching 301
+/news/ /news 301
+/news/* /news 301
+/blog/ /news 301
+/blog/* /news 301
+/projects/ /research 301
+/projects/* /research 301
+/cv/ / 301
+/cv/* / 301
+/repositories/ / 301
+/repositories/* / 301
+/people/ / 301
+/people/* / 301
+/books/ / 301
+/books/* / 301

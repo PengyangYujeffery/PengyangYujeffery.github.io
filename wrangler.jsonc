@@ -3,7 +3,8 @@
   "name": "pengyangyu-homepage",
   "compatibility_date": "2026-07-21",
   "assets": {
-    "directory": ".",
+    // Only public/ is published. Sources, tooling and .git stay outside it.
+    "directory": "./public",
     "html_handling": "none"
   }
 }

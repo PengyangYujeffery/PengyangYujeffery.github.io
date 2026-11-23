@@ -1,0 +1,34 @@
+[
+  {
+    "category": {
+      "en": "Research",
+      "zh": "研究"
+    },
+    "title": {
+      "en": "Interactive Research Map",
+      "zh": "交互式研究地图"
+    },
+    "excerpt": {
+      "en": "Explore the connections between medical AI, reliability, fairness, clinical deployment, and current projects.",
+      "zh": "探索医学 AI、可靠性、公平性、临床部署和当前研究项目之间的联系。"
+    },
+    "keywords": "medical ai reliability fairness deployment HD-Cal MedLiteNet dual fairness",
+    "href": "research.html#research-map-section"
+  },
+  {
+    "category": {
+      "en": "Research",
+      "zh": "研究"
+    },
+    "title": {
+      "en": "Reliable and Fair Medical AI Across Clinical Settings",
+      "zh": "不同临床场景下可靠与公平的医学人工智能"
+    },
+    "excerpt": {
+      "en": "Research on auditing, monitoring, and responsibly deploying medical foundation models.",
+      "zh": "关于医学基础模型审计、监测和负责任部署的研究。"
+    },
+    "keywords": "medical foundation models clinical shift calibration monitoring",
+    "href": "research.html"
+  }
+]

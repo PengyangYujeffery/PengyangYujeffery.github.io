@@ -1,7 +1,6 @@
 (function() {
-  const themeToggle = document.getElementById('themeToggle');
+  // The light/dark theme lives in theme.js, which runs in <head>.
   const languageToggle = document.getElementById('languageToggle');
-  const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
   const description = document.querySelector('meta[name="description"]');
   const searchShell = document.querySelector('.site-search');
   const searchToggle = document.getElementById('searchToggle');
@@ -21,43 +20,6 @@
     const routeLanguage = getRouteLanguage();
     if (!routeLanguage || routeLanguage === language) return;
     window.history.replaceState({}, '', language === 'zh' ? '/zh' : '/en');
-  }
-
-  function setTheme(isDark) {
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    if (themeIcon) {
-      themeIcon.classList.toggle('fa-sun', isDark);
-      themeIcon.classList.toggle('fa-moon', !isDark);
-    }
-  }
-
-  function shouldUseDarkTheme(date) {
-    const hour = date.getHours();
-    return hour >= 19 || hour < 6;
-  }
-
-  function applyScheduledTheme() {
-    setTheme(shouldUseDarkTheme(new Date()));
-  }
-
-  function scheduleNextThemeChange() {
-    const now = new Date();
-    const nextChange = new Date(now);
-    const hour = now.getHours();
-
-    if (hour < 6) {
-      nextChange.setHours(6, 0, 0, 0);
-    } else if (hour < 19) {
-      nextChange.setHours(19, 0, 0, 0);
-    } else {
-      nextChange.setDate(nextChange.getDate() + 1);
-      nextChange.setHours(6, 0, 0, 0);
-    }
-
-    window.setTimeout(function() {
-      applyScheduledTheme();
-      scheduleNextThemeChange();
-    }, Math.max(1000, nextChange.getTime() - now.getTime() + 100));
   }
 
   function setLanguage(language) {
@@ -99,14 +61,6 @@
     document.dispatchEvent(new CustomEvent('site:languagechange', { detail: { language: language } }));
   }
 
-  applyScheduledTheme();
-  scheduleNextThemeChange();
-
-  window.addEventListener('focus', applyScheduledTheme);
-  document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) applyScheduledTheme();
-  });
-
   const savedLanguage = localStorage.getItem('language');
   const browserLanguage = /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
   const routeLanguage = getRouteLanguage();
@@ -114,13 +68,6 @@
     ? savedLanguage
     : browserLanguage);
   setLanguage(initialLanguage);
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      setTheme(!isDark);
-    });
-  }
 
   if (languageToggle) {
     languageToggle.addEventListener('click', function() {

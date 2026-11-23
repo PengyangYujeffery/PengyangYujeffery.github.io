@@ -22,7 +22,6 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://pengyangyu.com/assets/img/avatar-20260821.jpg">
   <meta property="og:image:alt" content="Portrait of Pengyang Yu">
-  <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
 
   <script type="application/ld+json">
   {
@@ -57,15 +56,18 @@
   }
   </script>
 
+  <!-- build:head -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
-  <link rel="stylesheet" href="assets/css/theme-luka.css?v=12">
+  <link rel="stylesheet" href="assets/css/theme-luka.css">
+  <script src="assets/js/theme.js"></script>
+  <!-- /build:head -->
 </head>
 <body class="theme-luka">
+  <!-- build:nav -->
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-left">
@@ -73,7 +75,7 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="primaryNav">
-          <a class="nav-link active" href="./" data-i18n data-en="Home" data-zh="首页">Home</a>
+          <a class="nav-link active" aria-current="page" href="./" data-i18n data-en="Home" data-zh="首页">Home</a>
           <a class="nav-link" href="research.html" data-i18n data-en="Research" data-zh="研究">Research</a>
           <a class="nav-link" href="publications.html" data-i18n data-en="Publications" data-zh="论文">Publications</a>
           <a class="nav-link" href="teaching.html" data-i18n data-en="Teaching" data-zh="教学">Teaching</a>
@@ -86,23 +88,24 @@
             <label class="sr-only" for="siteSearchInput">Search</label>
             <input id="siteSearchInput" name="q" type="search" autocomplete="off" placeholder="Search..." data-placeholder-en="Search..." data-placeholder-zh="搜索..." aria-label="Search">
           </form>
-          <button id="searchToggle" class="search-toggle" type="button" title="Search" aria-label="Search" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="searchToggle" class="search-toggle" type="button" title="Search" aria-label="Search" aria-expanded="false"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m15.6 15.6 5.2 5.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.8"/></svg></button>
         </div>
-        <button id="languageToggle" class="language-toggle" title="Switch language" aria-label="Switch language">中</button>
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+        <button id="languageToggle" class="language-toggle" type="button" title="Switch language" aria-label="Switch language">中</button>
+        <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme"><svg class="nav-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"/></svg><svg class="nav-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 1.8v2.4M12 19.8v2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"/></svg></button>
       </div>
     </div>
   </nav>
+  <!-- /build:nav -->
 
   <div class="wrapper">
+    <!-- build:sidebar -->
     <header class="sidebar">
       <div class="profile-card">
-        <div class="avatar-photo"><img src="assets/img/avatar-20260821.jpg?v=1" alt="Portrait of Pengyang Yu"></div>
+        <div class="avatar-photo"><img src="assets/img/avatar-20260821.jpg" alt="Portrait of Pengyang Yu"></div>
         <h1 class="site-name" data-i18n data-en="Pengyang Yu" data-zh="郁鹏洋">Pengyang Yu</h1>
         <p class="site-name-alt" data-i18n data-en="郁鹏洋" data-zh="Pengyang Yu">郁鹏洋</p>
         <p class="site-role" data-i18n data-en="PhD Student" data-zh="博士生">PhD Student</p>
         <p class="site-email"><a href="mailto:pengyang.yu@ucdconnect.ie">pengyang.yu@ucdconnect.ie</a></p>
-
         <div class="social-icons" aria-label="Academic links">
           <a href="mailto:pengyang.yu@ucdconnect.ie" title="Email" aria-label="Email"><svg class="social-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6.5 12 13l9-6.5M4 18h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg></a>
           <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=qEGK9kEAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
@@ -112,6 +115,7 @@
         </div>
       </div>
     </header>
+    <!-- /build:sidebar -->
 
     <main class="content">
       <section class="section" id="about">
@@ -178,6 +182,7 @@
       <section class="section" id="selected-publications">
         <h2 class="section-title" data-i18n data-en="Selected Publications" data-zh="代表性论文">Selected Publications</h2>
         <div class="publication-list">
+          <!-- build:selected-publications -->
           <article class="publication-card">
             <p class="pub-status" data-i18n data-en="Published · 2026-07-05" data-zh="已发表 · 2026-07-05">Published · 2026-07-05</p>
             <h3>Fairness in federated medical imaging: a systematic review through the dual fairness lens</h3>
@@ -188,21 +193,25 @@
           <article class="publication-card">
             <p class="pub-status" data-i18n data-en="Published · 2025-12-25" data-zh="已发表 · 2025-12-25">Published · 2025-12-25</p>
             <h3>MedLiteNet: Lightweight Hybrid Medical Image Segmentation Model for the Medical Internet of Things (MIoT)</h3>
-            <p class="pub-venue"><em>IEEE Journal of Selected Areas in Sensors</em> · 2026 · 3:78–89 · Published 2025-12-25</p>
+            <p class="pub-venue"><em>IEEE Journal of Selected Areas in Sensors</em> · 2026 · 3:78–89 · Journal article</p>
             <p class="pub-authors">Pengyang Yu, Haoquan Wang, Gerard Marks, Tahar Kechadi, Laurence T. Yang, Sahraoui Dhelim, and Nyothiri Aung.</p>
             <a class="pub-link" href="https://doi.org/10.1109/JSAS.2025.3648685" target="_blank" rel="noopener">DOI: 10.1109/JSAS.2025.3648685</a>
           </article>
+          <!-- /build:selected-publications -->
         </div>
         <p class="page-links"><a href="publications.html" data-i18n data-en="See all publication details →" data-zh="查看完整论文信息 →">See all publication details →</a></p>
       </section>
     </main>
 
+    <!-- build:footer -->
     <footer class="site-footer">
       <p>&copy; 2026 Pengyang Yu. All rights reserved.</p>
     </footer>
+    <!-- /build:footer -->
   </div>
 
-  <script src="assets/js/scale.fix.js"></script>
-  <script src="assets/js/site.js?v=6"></script>
+  <!-- build:scripts -->
+  <script src="assets/js/site.js"></script>
+  <!-- /build:scripts -->
 </body>
 </html>

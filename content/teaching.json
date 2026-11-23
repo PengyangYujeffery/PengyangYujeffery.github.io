@@ -1,0 +1,42 @@
+[
+  {
+    "code": "COMP47780",
+    "term": {
+      "en": "2025 Autumn",
+      "zh": "2025 秋季学期"
+    },
+    "title": {
+      "en": "Cloud Computing",
+      "zh": "云计算"
+    },
+    "institution": {
+      "en": "University College Dublin",
+      "zh": "都柏林大学"
+    },
+    "role": {
+      "en": "Demonstrator",
+      "zh": "Demonstrator"
+    },
+    "keywords": "teaching demonstrator cloud computing undergraduate postgraduate"
+  },
+  {
+    "code": "COMP20180",
+    "term": {
+      "en": "2026 Spring",
+      "zh": "2026 春季学期"
+    },
+    "title": {
+      "en": "Intro to Operating Systems",
+      "zh": "操作系统导论"
+    },
+    "institution": {
+      "en": "University College Dublin",
+      "zh": "都柏林大学"
+    },
+    "role": {
+      "en": "Demonstrator",
+      "zh": "Demonstrator"
+    },
+    "keywords": "teaching demonstrator operating systems undergraduate postgraduate"
+  }
+]

@@ -12,16 +12,18 @@
   <meta name="description" content="Publications and current research work by Pengyang Yu.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://pengyangyu.com/publications">
-  <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
+  <!-- build:head -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
-  <link rel="stylesheet" href="assets/css/theme-luka.css?v=12">
+  <link rel="stylesheet" href="assets/css/theme-luka.css">
+  <script src="assets/js/theme.js"></script>
+  <!-- /build:head -->
 </head>
 <body class="theme-luka">
+  <!-- build:nav -->
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-left">
@@ -31,7 +33,7 @@
         <div class="nav-links" id="primaryNav">
           <a class="nav-link" href="./" data-i18n data-en="Home" data-zh="首页">Home</a>
           <a class="nav-link" href="research.html" data-i18n data-en="Research" data-zh="研究">Research</a>
-          <a class="nav-link active" href="publications.html" data-i18n data-en="Publications" data-zh="论文">Publications</a>
+          <a class="nav-link active" aria-current="page" href="publications.html" data-i18n data-en="Publications" data-zh="论文">Publications</a>
           <a class="nav-link" href="teaching.html" data-i18n data-en="Teaching" data-zh="教学">Teaching</a>
           <a class="nav-link" href="news.html" data-i18n data-en="News" data-zh="动态">News</a>
         </div>
@@ -42,18 +44,20 @@
             <label class="sr-only" for="siteSearchInput">Search</label>
             <input id="siteSearchInput" name="q" type="search" autocomplete="off" placeholder="Search..." data-placeholder-en="Search..." data-placeholder-zh="搜索..." aria-label="Search">
           </form>
-          <button id="searchToggle" class="search-toggle" type="button" title="Search" aria-label="Search" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="searchToggle" class="search-toggle" type="button" title="Search" aria-label="Search" aria-expanded="false"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m15.6 15.6 5.2 5.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.8"/></svg></button>
         </div>
-        <button id="languageToggle" class="language-toggle" title="Switch language" aria-label="Switch language">中</button>
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+        <button id="languageToggle" class="language-toggle" type="button" title="Switch language" aria-label="Switch language">中</button>
+        <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme"><svg class="nav-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"/></svg><svg class="nav-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 1.8v2.4M12 19.8v2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"/></svg></button>
       </div>
     </div>
   </nav>
+  <!-- /build:nav -->
 
   <div class="wrapper">
+    <!-- build:sidebar -->
     <header class="sidebar">
       <div class="profile-card">
-        <div class="avatar-photo"><img src="assets/img/avatar-20260821.jpg?v=1" alt="Portrait of Pengyang Yu"></div>
+        <div class="avatar-photo"><img src="assets/img/avatar-20260821.jpg" alt="Portrait of Pengyang Yu"></div>
         <h1 class="site-name" data-i18n data-en="Pengyang Yu" data-zh="郁鹏洋">Pengyang Yu</h1>
         <p class="site-name-alt" data-i18n data-en="郁鹏洋" data-zh="Pengyang Yu">郁鹏洋</p>
         <p class="site-role" data-i18n data-en="PhD Student" data-zh="博士生">PhD Student</p>
@@ -67,6 +71,7 @@
         </div>
       </div>
     </header>
+    <!-- /build:sidebar -->
 
     <main class="content page-content">
       <section class="page-hero visible">
@@ -78,11 +83,12 @@
       <section class="section visible" id="published-work">
         <h2 class="section-title" data-i18n data-en="Published Work" data-zh="已发表论文">Published Work</h2>
         <div class="publication-list">
+          <!-- build:published-work -->
           <article class="publication-card publication-card-detailed">
             <p class="pub-status" data-i18n data-en="Published · 2026-07-05" data-zh="已发表 · 2026-07-05">Published · 2026-07-05</p>
             <h3>Fairness in federated medical imaging: a systematic review through the dual fairness lens</h3>
             <p class="pub-authors">Pengyang Yu, Zhongping Dong, Sahraoui Dhelim, Chun-Mei Feng, and M. Tahar Kechadi.</p>
-            <p class="pub-venue"><em>Artificial Intelligence Review</em> · 2026-07-05 · Journal article</p>
+            <p class="pub-venue"><em>Artificial Intelligence Review</em> · 2026 · Journal article</p>
             <p class="pub-description" data-i18n data-en="A systematic review that studies collaboration fairness across institutions and group fairness across patient populations as two connected dimensions of fairness in federated medical imaging." data-zh="一篇系统综述，将联邦医学影像中的机构协作公平与患者群体公平作为相互关联的两个公平维度进行研究。">A systematic review that studies collaboration fairness across institutions and group fairness across patient populations as two connected dimensions of fairness in federated medical imaging.</p>
             <div class="publication-actions"><a class="pub-link" href="https://doi.org/10.1007/s10462-026-11632-4" target="_blank" rel="noopener">DOI: 10.1007/s10462-026-11632-4</a></div>
           </article>
@@ -91,38 +97,45 @@
             <p class="pub-status" data-i18n data-en="Published · 2025-12-25" data-zh="已发表 · 2025-12-25">Published · 2025-12-25</p>
             <h3>MedLiteNet: Lightweight Hybrid Medical Image Segmentation Model for the Medical Internet of Things (MIoT)</h3>
             <p class="pub-authors">Pengyang Yu, Haoquan Wang, Gerard Marks, Tahar Kechadi, Laurence T. Yang, Sahraoui Dhelim, and Nyothiri Aung.</p>
-            <p class="pub-venue"><em>IEEE Journal of Selected Areas in Sensors</em> · 2026 · Journal article · Publication date: 2025-12-25</p>
+            <p class="pub-venue"><em>IEEE Journal of Selected Areas in Sensors</em> · 2026 · 3:78–89 · Journal article</p>
             <p class="pub-description" data-i18n data-en="A lightweight hybrid CNN–Transformer model for medical image segmentation, representing my earlier work in efficient and deployable medical AI." data-zh="面向医学图像分割的轻量化 CNN–Transformer 混合模型，代表我在高效和可部署医学人工智能方面的早期研究。">A lightweight hybrid CNN–Transformer model for medical image segmentation, representing my earlier work in efficient and deployable medical AI.</p>
-            <div class="publication-actions"><a class="pub-link" href="https://doi.org/10.1109/jsas.2025.3648685" target="_blank" rel="noopener">DOI: 10.1109/JSAS.2025.3648685</a></div>
+            <div class="publication-actions"><a class="pub-link" href="https://doi.org/10.1109/JSAS.2025.3648685" target="_blank" rel="noopener">DOI: 10.1109/JSAS.2025.3648685</a></div>
           </article>
+          <!-- /build:published-work -->
         </div>
       </section>
 
       <section class="section visible" id="current-work">
         <h2 class="section-title" data-i18n data-en="Current Work" data-zh="当前研究工作">Current Work</h2>
         <div class="publication-list">
+          <!-- build:current-work -->
           <article class="publication-card publication-card-detailed">
             <p class="pub-status status-in-progress" data-i18n data-en="In progress" data-zh="进行中">In progress</p>
             <h3>HD-Cal: Few-Shot Reliability Estimation for Cross-Domain Hallucination Heterogeneity in Chest X-Ray Vision-Language Models</h3>
             <p class="pub-venue" data-i18n data-en="Medical vision-language models · reliability audit · cross-domain evaluation" data-zh="医学视觉语言模型 · 可靠性审计 · 跨域评估">Medical vision-language models · reliability audit · cross-domain evaluation</p>
             <p class="pub-description" data-i18n data-en="A deployment-oriented reliability audit that examines how hallucination and error behaviour varies across chest X-ray domains and findings, and estimates localized reliability with few-shot target-domain information." data-zh="面向部署的可靠性审计研究，考察胸部 X 光视觉语言模型的幻觉和错误行为如何随数据域与疾病征象变化，并利用少量目标域信息估计局部可靠性。">A deployment-oriented reliability audit that examines how hallucination and error behaviour varies across chest X-ray domains and findings, and estimates localized reliability with few-shot target-domain information.</p>
           </article>
+
           <article class="publication-card publication-card-detailed">
             <p class="pub-status status-planned" data-i18n data-en="Planned direction" data-zh="计划方向">Planned direction</p>
             <h3 data-i18n data-en="Context-adjusted fair deferral" data-zh="上下文调整的公平拒答">Context-adjusted fair deferral</h3>
             <p class="pub-venue" data-i18n data-en="Reliability–fairness bridge · future method work" data-zh="可靠性与公平性桥接 · 后续方法研究">Reliability–fairness bridge · future method work</p>
             <p class="pub-description" data-i18n data-en="A future direction for separating finding difficulty from demographic under-service, so that deployment-time deferral can respond to genuine unreliability without shifting burden unfairly across groups." data-zh="后续方向之一：区分疾病征象本身的难度与对特定群体的服务不足，使部署阶段的拒答策略能够针对真实不可靠性，同时避免将负担不公平地转移给不同群体。">A future direction for separating finding difficulty from demographic under-service, so that deployment-time deferral can respond to genuine unreliability without shifting burden unfairly across groups.</p>
           </article>
+          <!-- /build:current-work -->
         </div>
       </section>
     </main>
 
+    <!-- build:footer -->
     <footer class="site-footer">
       <p>&copy; 2026 Pengyang Yu. All rights reserved.</p>
     </footer>
+    <!-- /build:footer -->
   </div>
 
-  <script src="assets/js/scale.fix.js"></script>
-  <script src="assets/js/site.js?v=6"></script>
+  <!-- build:scripts -->
+  <script src="assets/js/site.js"></script>
+  <!-- /build:scripts -->
 </body>
 </html>

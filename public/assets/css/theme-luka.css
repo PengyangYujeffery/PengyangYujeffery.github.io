@@ -1528,3 +1528,20 @@ body.theme-luka .nav-toggle.is-open span:nth-child(3) {
     width: 26px;
   }
 }
+
+/* Inline SVG icons in the top navigation (search, theme toggle) */
+body.theme-luka .nav-icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+  margin: 0 auto;
+}
+
+body.theme-luka .theme-toggle .icon-sun,
+[data-theme="dark"] body.theme-luka .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] body.theme-luka .theme-toggle .icon-sun {
+  display: block;
+}
